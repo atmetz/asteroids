@@ -22,6 +22,9 @@ def main():
                 return
 
         screen.fill(color="black")
+        # udpate player position/rotation
+        player1.update(dt)
+        # draw player
         player1.draw(screen)
         pygame.display.flip()
         # limit the frame rate
