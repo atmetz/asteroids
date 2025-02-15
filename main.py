@@ -40,6 +40,11 @@ def main():
         # udpate objects position/rotation
         updatable.update(dt)
 
+        for aster in asteroids:
+            if player1.collision(aster):
+                print("Game Over!")
+                return
+
         # draw objects
         for object in drawable:
             object.draw(screen)
