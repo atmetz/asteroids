@@ -49,7 +49,8 @@ def main():
                 return
             for shot in shots:
                 if shot.collision(aster):
-                    aster.kill()
+                    aster.split()
+                    shot.kill()
 
         # draw objects
         for object in drawable:
