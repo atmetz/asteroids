@@ -47,6 +47,9 @@ def main():
             if player1.collision(aster):
                 print("Game Over!")
                 return
+            for shot in shots:
+                if shot.collision(aster):
+                    aster.kill()
 
         # draw objects
         for object in drawable:
